@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main_content %}
+    
+      <div class="trails-header">
+        <h1>Register</h1>
+        <p class="trails-subtitle">Register your account</p>
+    </div>
+    <div class="container">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Register</button>
+        </form>
+
+        <p class="text-center">
+            Already have an account?
+            <a href="{% url 'login' %}">Log in</a>
+        </p>
+    </div>
+{% endblock %}
+

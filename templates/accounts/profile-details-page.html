@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Profile Details
+{% endblock %}
+
+{% block main_content %}
+    <div class="trails-header">
+        <h1>Your Profile Details</h1>
+        <p class="trails-subtitle">View and manage your personal information</p>
+    </div>
+    <div class="trail-details-container">
+        <!-- Hero Image Section -->
+        <div class="trail-hero">
+            {% if profile.profile_picture %}
+                <img src="{{ profile.profile_picture.url }}" alt="{{ profile.user.username }}'s profile picture">
+            {% endif %}
+        </div>
+{#        {% include 'partials/profiles/profile-details-card.html' %}#}
+    </div>
+{% endblock %}

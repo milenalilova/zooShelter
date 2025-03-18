@@ -1,4 +1,6 @@
 import os
+
+from django.urls import reverse_lazy
 from dotenv import load_dotenv
 
 from pathlib import Path
@@ -120,3 +122,6 @@ STATICFILES_DIRS = [BASE_DIR / 'staticfiles']
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.AppUser'
+
+LOGIN_REDIRECT_URL = reverse_lazy('home-page')
+LOGOUT_REDIRECT_URL = reverse_lazy('login')
