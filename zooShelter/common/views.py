@@ -8,3 +8,7 @@ class IndexView(TemplateView):
 
 class AboutView(TemplateView):
     template_name = 'common/about-page.html'
+
+
+class ContactView(TemplateView):
+    template_name = 'common/contact-page.html'
